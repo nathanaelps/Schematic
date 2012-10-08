@@ -34,6 +34,7 @@ public class Schematic {
 	// Is it possible to make a List<byte> or something like that?
 	private List<Integer> dArray = new ArrayList<Integer>();
 
+	
 	public Schematic(String fileName) throws IOException{
 		byte[] uGD;
 		try{
@@ -45,6 +46,7 @@ public class Schematic {
 		kludgy(uGD);
 	}
 
+	
 	public Schematic(byte[] uGD) {
 		kludgy(uGD);
 	}
@@ -72,7 +74,7 @@ public class Schematic {
        		this.dArray.add((int) uGD[dStart+i]);
        	}
 	}
-
+	
 	private int indexOf(byte[] data, String pattern) {
 		return indexOf(data,pattern.getBytes());
 	}
